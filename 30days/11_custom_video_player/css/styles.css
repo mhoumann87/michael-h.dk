@@ -4,10 +4,10 @@
 
 :root {
   --background: #586a54;
-  --accent: #3D5D3C;
-  --rgba: rgba(88, 106, 84, .6);
-  --font: #FEF7DA;
-  --link-hover: #BD573F;
+  --accent: #3d5d3c;
+  --rgba: rgba(88, 106, 84, 0.6);
+  --font: #fef7da;
+  --link-hover: #bd573f;
 }
 
 /* Base */
@@ -19,17 +19,15 @@ body {
   font-family: 'Mukta Malar', sans-serif;
 }
 
-@media screen and (min-width: 56.250rem) {
-
+@media screen and (min-width: 56.25rem) {
   body {
     font-size: 100%;
   }
 }
 
-@media screen and (min-width: 112.500rem) {
-
+@media screen and (min-width: 112.5rem) {
   body {
-    width: 112.500rem;
+    width: 112.5rem;
     margin: 0 auto;
   }
 }
@@ -71,14 +69,13 @@ header {
 
 .text {
   background-color: var(--accent);
-  padding: .8rem;
+  padding: 0.8rem;
 }
 
 .text h1 {
   font-size: 2rem;
   font-weight: 400;
   margin: 0;
-
 }
 
 .text a,
@@ -89,8 +86,7 @@ header {
 }
 
 @supports (grid-area: auto) {
-  @media screen and (min-width: 56.250em) {
-
+  @media screen and (min-width: 56.25em) {
     header {
       flex-direction: row;
       justify-content: space-between;
@@ -99,7 +95,7 @@ header {
 
     .branding {
       display: grid;
-      background-image: url("../images/port_top.jpg");
+      background-image: url('../images/port_top.jpg');
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -115,31 +111,40 @@ header {
       font-size: 3rem;
       margin: 0;
     }
-
   }
-
 }
-
 
 /* Navigation */
 
-nav {
+nav ul {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-items: flex-end;
+  list-style: none;
 }
 
-.button {
-  padding: 10px;
-  margin-right: 10px;
+nav li {
+  padding: 1rem;
 }
 
-.button a {
+nav li a {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-decoration: none;
   cursor: pointer;
 }
 
+nav li a:hover,
+nav li a:active,
+nav li a:focus {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+nav .current {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
 /* Breadcrumb line */
 
 .breadcrumbs {
@@ -152,9 +157,9 @@ nav {
 }
 
 .crumb::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  content: "\f0a9";
+  content: '\f0a9';
   margin: 0 10px;
 }
 
@@ -169,8 +174,7 @@ nav {
 }
 
 @supports (grid-area: auto) {
-  @media screen and (min-width: 56.250em) {
-
+  @media screen and (min-width: 56.25em) {
     nav {
       display: flex;
       flex-direction: row;
@@ -217,14 +221,10 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-around;
-
 }
 
-
-
 @supports (grid-area: auto) {
-
-  @media screen and (min-width: 56.250rem) {
+  @media screen and (min-width: 56.25rem) {
     footer {
       flex-direction: row;
       justify-content: space-between;
@@ -304,7 +304,7 @@ video {
   align-items: center;
   padding: 5px;
   font-size: 1.4rem;
-  background-color: #BD573F;
+  background-color: #bd573f;
   color: var(--font);
   border: none;
   -webkit-box-shadow: 11px 11px 34px -2px rgba(0, 0, 0, 0.75);
@@ -313,7 +313,8 @@ video {
   width: 90px;
 }
 
-.play {}
+.play {
+}
 
 /* 
 * Styling the buttons
@@ -324,31 +325,31 @@ video {
 */
 
 /* Remove the old slider all browsers*/
-input[type="range"] {
+input[type='range'] {
   -webkit-appearance: none;
   width: 100%;
   background: transparent;
 }
 
-input[type="range"]::-moz-range-track {
+input[type='range']::-moz-range-track {
   background-color: transparent;
 }
 
-input[type=range]::-moz-range-thumb {
+input[type='range']::-moz-range-thumb {
   background: transparent;
   border-color: transparent;
   color: transparent;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
-input[type="range"]:focus {
+input[type='range']:focus {
   outline: none;
 }
 
-input[type="range"]::-ms-track {
+input[type='range']::-ms-track {
   width: 100%;
   cursor: pointer;
   background: transparent;
@@ -358,7 +359,7 @@ input[type="range"]::-ms-track {
 
 /* New slider-thumb */
 
-input[type=range]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 1px solid #282828;
   height: 30px;
@@ -370,7 +371,7 @@ input[type=range]::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px #282828, 0px 0px 1px #0d0d0d;
 }
 
-input[type=range]::-ms-thumb {
+input[type='range']::-ms-thumb {
   box-shadow: 1px 1px 1px #282828, 0px 0px 1px #0d0d0d;
   border: 1px solid #282828;
   height: 30px;
@@ -380,7 +381,7 @@ input[type=range]::-ms-thumb {
   cursor: pointer;
 }
 
-input[type=range]::-moz-range-thumb {
+input[type='range']::-moz-range-thumb {
   box-shadow: 1px 1px 1px #282828, 0px 0px 1px #0d0d0d;
   border: 1px solid #282828;
   height: 30px;
@@ -392,21 +393,21 @@ input[type=range]::-moz-range-thumb {
 
 /* New slider-track for all browsers */
 
-input[type=range]::-webkit-slider-runnable-track {
+input[type='range']::-webkit-slider-runnable-track {
   width: 100%;
   height: 8.4px;
   cursor: pointer;
   box-shadow: 1px 1px 1px #282828, 0px 0px 1px #0d0d0d;
-  background: #BD573F;
+  background: #bd573f;
   border-radius: 1.3px;
   border: 0.2px solid #010101;
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #BD573F;
+input[type='range']:focus::-webkit-slider-runnable-track {
+  background: #bd573f;
 }
 
-input[type=range]::-ms-track {
+input[type='range']::-ms-track {
   width: 100%;
   height: 8.4px;
   cursor: pointer;
@@ -416,34 +417,34 @@ input[type=range]::-ms-track {
   color: transparent;
 }
 
-input[type=range]::-ms-fill-lower {
-  background: #BD573F;
+input[type='range']::-ms-fill-lower {
+  background: #bd573f;
   border: 0.2px solid #010101;
   border-radius: 2.6px;
   box-shadow: 1px 1px 1px #282828, 0px 0px 1px #0d0d0d;
 }
 
-input[type=range]:focus::-ms-fill-lower {
-  background: #BD573F;
+input[type='range']:focus::-ms-fill-lower {
+  background: #bd573f;
 }
 
-input[type=range]::-ms-fill-upper {
-  background: #BD573F;
+input[type='range']::-ms-fill-upper {
+  background: #bd573f;
   border: 0.2px solid #010101;
   border-radius: 2.6px;
   box-shadow: 1px 1px 1px #282828, 0px 0px 1px #0d0d0d;
 }
 
-input[type=range]:focus::-ms-fill-upper {
-  background: #BD573F;
+input[type='range']:focus::-ms-fill-upper {
+  background: #bd573f;
 }
 
-input[type=range]::-moz-range-track {
+input[type='range']::-moz-range-track {
   width: 100%;
   height: 8.4px;
   cursor: pointer;
   box-shadow: 1px 1px 1px #282828, 0px 0px 1px #0d0d0d;
-  background: #BD573F;
+  background: #bd573f;
   border-radius: 1.3px;
   border: 0.2px solid #010101;
 }

@@ -3,10 +3,10 @@
 */
 
 :root {
-  --background: #A75C3F;
+  --background: #a75c3f;
   --accent: #644034;
-  --rgba: rgba(167, 92, 63, .4);
-  --font: #C9C7A1;
+  --rgba: rgba(167, 92, 63, 0.4);
+  --font: #c9c7a1;
   --link-hover: #998463;
 }
 
@@ -19,17 +19,15 @@ body {
   font-family: 'Mukta Malar', sans-serif;
 }
 
-@media screen and (min-width: 56.250rem) {
-
+@media screen and (min-width: 56.25rem) {
   body {
     font-size: 100%;
   }
 }
 
-@media screen and (min-width: 112.500rem) {
-
+@media screen and (min-width: 112.5rem) {
   body {
-    width: 112.500rem;
+    width: 112.5rem;
     margin: 0 auto;
   }
 }
@@ -71,14 +69,13 @@ header {
 
 .text {
   background-color: var(--accent);
-  padding: .8rem;
+  padding: 0.8rem;
 }
 
 .text h1 {
   font-size: 2rem;
   font-weight: 400;
   margin: 0;
-
 }
 
 .text a,
@@ -89,8 +86,7 @@ header {
 }
 
 @supports (grid-area: auto) {
-  @media screen and (min-width: 56.250em) {
-
+  @media screen and (min-width: 56.25em) {
     header {
       flex-direction: row;
       justify-content: space-between;
@@ -99,7 +95,7 @@ header {
 
     .branding {
       display: grid;
-      background-image: url("../images/foto_top.jpg");
+      background-image: url('../images/foto_top.jpg');
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -115,31 +111,39 @@ header {
       font-size: 3rem;
       margin: 0;
     }
-
   }
-
 }
-
 
 /* Navigation */
-
-nav {
+nav ul {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-items: flex-end;
+  list-style: none;
 }
 
-.button {
-  padding: 10px;
-  margin-right: 10px;
+nav li {
+  padding: 1rem;
 }
 
-.button a {
+nav li a {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-decoration: none;
   cursor: pointer;
 }
 
+nav li a:hover,
+nav li a:active,
+nav li a:focus {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+nav .current {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
 /* Breadcrumb line */
 
 .breadcrumbs {
@@ -152,9 +156,9 @@ nav {
 }
 
 .crumb::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  content: "\f0a9";
+  content: '\f0a9';
   margin: 0 10px;
 }
 
@@ -169,8 +173,7 @@ nav {
 }
 
 @supports (grid-area: auto) {
-  @media screen and (min-width: 56.250em) {
-
+  @media screen and (min-width: 56.25em) {
     nav {
       display: flex;
       flex-direction: row;
@@ -217,14 +220,10 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-around;
-
 }
 
-
-
 @supports (grid-area: auto) {
-
-  @media screen and (min-width: 56.250rem) {
+  @media screen and (min-width: 56.25rem) {
     footer {
       flex-direction: row;
       justify-content: space-between;
@@ -307,13 +306,12 @@ main {
   flex-grow: 1;
 }
 
-input:checked+p {
+input:checked + p {
   text-decoration: line-through;
 }
 
 @supports (grid-area: auto) {
-  @media screen and (min-width: 56.250rem) {
-
+  @media screen and (min-width: 56.25rem) {
     .present {
       width: 100%;
       margin: 0;
@@ -328,6 +326,5 @@ input:checked+p {
     .present-photo {
       flex: 0 0 50%;
     }
-
   }
 }
