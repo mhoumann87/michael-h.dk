@@ -1,0 +1,269 @@
+/* Base */
+body {
+  width: 100%;
+  background-color: #e0effc;
+  color: #282828;
+  font-size: 90%;
+  font-family: 'Mukta Malar', sans-serif;
+}
+
+@media screen and (min-width: 56.25rem) {
+  body {
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 112.5rem) {
+  body {
+    width: 112.5rem;
+    margin: 0 auto;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 700;
+}
+
+a {
+  color: #282828;
+}
+
+a:hover {
+  color: #a14000;
+}
+
+/* Header */
+header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.825rem;
+}
+
+@media screen and (min-width: 53.125rem) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+header h1 {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+header h1 a {
+  color: #272625;
+  text-decoration: none;
+}
+
+header p {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  font-size: 1.4rem;
+}
+
+nav li {
+  padding: 0 1rem;
+}
+
+nav a {
+  color: #c65146;
+  border: none;
+  transition: all 0.25s ease-in-out;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:active,
+nav a:focus {
+  color: #af4034;
+  border-bottom: 1px solid #af4034;
+}
+
+nav .current {
+  color: #af4034;
+  border-bottom: 1px solid #af4034;
+}
+
+/* Breadcrumb line */
+
+.breadcrumbs {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px 5px 0;
+  background-color: #fff;
+}
+
+.crumb::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f0a9';
+  margin: 0 10px;
+}
+
+.breadcrumbs a,
+.breadcrumbs a:visited,
+.breadcrumbs a:active,
+.breadcrumbs a:hover {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #282828;
+  cursor: pointer;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.25em) {
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-items: flex-end;
+    }
+
+    .button a {
+      font-weight: 600;
+      font-size: 1.3rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+/* Main Section*/
+
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+}
+
+.info-text {
+  width: 100%;
+}
+
+.projects {
+  margin-bottom: 2rem;
+}
+
+.project-card {
+  -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.75);
+  font-size: 1.2rem;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.25rem) {
+    main {
+      width: 98%;
+    }
+
+    .page-info {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .info-text {
+      padding: 0 10px;
+    }
+
+    .solutions {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.3rem;
+    }
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact {
+  display: none;
+}
+
+.contact a {
+  margin-bottom: 10px;
+}
+
+.social a {
+  font-size: 1.5rem;
+}
+
+.copy {
+  text-align: center;
+}
+
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.25rem) {
+    footer {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+    }
+
+    .contact a {
+      margin-bottom: 10px;
+    }
+
+    .social a {
+      font-size: 1.5rem;
+    }
+
+    .copy {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .social {
+      width: auto;
+      flex-grow: 1;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>michael-h.dk - 30 days of JavaScript</title>
+  <link rel="stylesheet" href="../../assets/css/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:300,400,600|Syncopate:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="branding">
+      <div class="text">
+        <h1><a href="../index.html">michael-h.dk</a></h1>
+        <p>Multimedia Designer and Web Developer</p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a class="current" href="../index.html">30 Days of Javascript</a></li>
+        <li><a href="../../javascript/index.html">Javascript Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="breadcrumbs">
+    <div class="crumbs-links">
+      <a class="crumb" href="../index.html">30daysJS</a>
+      <a class="crumb" href="./index.html">Array Cardio 2</a>
+    </div>
+    <div class="site-id">
+      Array Cardio 2
+    </div>
+  </div>
+
+  <main>
+
+    <section class="sec-head">
+
+      <div class="top-photo">
+        <img src="./images/ugur-akdemir-664735-unsplash.jpg" alt="Photo by Samuel Zeller from Unsplash.com">
+      </div>
+
+      <div class="head-text">
+        <h2>Array Cardio 2</h2>
+        <p>From the <a href="https://en.wikipedia.org/wiki/Array_data_structure" target="_blank">Wikipedia article</a>:
+          <blockquote>In computer science, an array data structure, or simply an array, is a data structure consisting
+            of
+            a
+            collection of elements (values or variables), each identified by at least one array index or key. An array
+            is
+            stored such that the position of each element can be computed from its index tuple by a mathematical
+            formula. The simplest type of data structure is a linear array, also called one-dimensional array.</blockquote>
+        </p>
+        <p>In all programming languages there are multiple ways to work with an array. Most of the time it is happening
+          invisible to the user, but here I will try to show how you can use the methods of working with arrays in
+          JavaScript.</p>
+      </div>
+
+    </section>
+
+    <section class="birthday">
+
+      <div class="present">
+        <div class="birth-text">
+
+          <h2>Birth years</h2>
+          <p>For the first exsamples I am using a list of names and birth years. You are welcome to enter some examples
+            of
+            your own if you want. None of the data you enter will be saved anywhere, it is for your use only</p>
+
+        </div>
+
+        <div class="birth-table">
+
+        </div>
+      </div>
+      <form id="people">
+        <div>
+          <label for="name">Enter a name: </label>
+          <input type="text" name="name" id="name" placeholder="Name">
+        </div>
+        <div>
+          <label for="year">Enter birth year</label>
+          <input type="number" name="year" id="year" min="0" placeholder="2018">
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      <p id="error" class="error"></p>
+
+      <section class="some">
+
+        <div class="ex-present">
+          <div class="exText">
+            <h4>1. Array.prototype.some()</h4>
+            <p>From <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some"
+                target="_blank">MDN web docs</a>:</p>
+            <blockquote>The some() method tests whether at least one element in the array passes the test implemented
+              by the provided function.</blockquote>
+          </div>
+
+          <div class="code">
+            <p>Check to see if any in the array is over a certain age entered by the user.</p>
+            <div class="snippet">
+              <code>const answer = people.some(person => ((new Date().getFullYear()) - person.year >= inputAge);</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="ex-present">
+          <div class="exText">
+            <h4>2. Array.prototype.every()</h4>
+            <p>From <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every"
+                target="_blank">MDN web docs</a>:</p>
+            <blockquote>The every() method tests whether all elements in the array pass the test implemented by the
+              provided function.</blockquote>
+          </div>
+
+          <div class="code">
+            <p>Check to see if any in the array is over a certain age entered by the user.</p>
+            <div class="snippet">
+              <code>const answer = people.some(person => ((new Date().getFullYear()) - person.year >= inputAge);</code>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="result">
+          <form id="inputAge">
+            <div>
+              <label for="userAge">Enter an age between 0 and 99: </label>
+              <input type="number" id="ageSugestion" name="userAge" placeholder="19" min="0" max="99">
+            </div>
+            <div>
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+          <p id="some-res"></p>
+        </div>
+        <p id="ageError" class="error"></p>
+
+        <div class="some-result">
+          <p class="result-some"></p>
+
+          <p class="result-every"></p>
+        </div>
+
+      </section>
+
+    </section>
+
+
+  </main>
+
+  <footer>
+    <!--Are going to work with the rest of the website -->
+    <div class="contact">
+      <a href="https://twitter.com/intent/tweet?screen_name=michaelhoumann&ref_src=twsrc%5Etfw" class="twitter-mention-button"
+        data-show-count="false">Tweet to @michaelhoumann</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <a href="mailto:michael@michael-h.dk"><i class="fas fa-envelope"></i>&nbsp;Send E-mail</a>
+    </div>
+
+    <div class="copy">
+
+      <p>
+        Photo by <a href="https://unsplash.com/@ugur" target="_blank">
+          Ugur Akdemir
+        </a>
+        on
+        <a href="https://unsplash.com/" target="_blank">
+          Unsplash
+        </a>
+      </p>
+      <p>
+        Web design and development
+        <span id="copy"></span>
+        Michael Houmann
+      </p>
+    </div>
+
+    <div class="social">
+      <div><a href="https://www.facebook.com/michael.houmann" target="_blank"><i class="fab fa-facebook-square"></i></a></div>
+      <div><a href="https://github.com/mhoumann87/" target="_blank"><i class="fab fa-github"></i></a></div>
+      <div><a href="https://twitter.com/MichaelHoumann" target="_blank"><i class="fab fa-twitter"></i></a></div>
+      <div><a href="https://www.linkedin.com/in/michael-houmann-3b03654b/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+
+    </div>
+  </footer>
+
+  <script src="./javascript/cardio_2.js"></script>
+</body>
+
+</html>

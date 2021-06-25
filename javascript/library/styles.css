@@ -1,0 +1,242 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/* Set variables for color and fonts */
+:root {
+  --white: #ebeef2;
+  --gray: #bfbbb4;
+  --dark-gray: #a3a09b;
+  --brown: #594839;
+  --light-brown: #8c7968;
+  --black: #0d0d0d;
+  --red: #960005;
+  --font: 'Oswald', sans-serif;
+
+  /* Social Icon Colors */
+  --linkedin: #0a66c2;
+  --twitter: #1da1f2;
+  --facebook: #1877f2;
+  --github: #181717;
+}
+
+/* Reset browser css */
+*,
+:before,
+:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Remove margin from body */
+body {
+  margin: 0;
+}
+
+/* Styles for the page */
+
+body {
+  background: var(--gray);
+  font-family: var(--font);
+  color: var(--black);
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 'header' 'main' 'footer';
+}
+
+button {
+  background: var(--light-brown);
+  border: 3px solid var(--brown);
+  font-size: 1.75rem;
+  padding: 0.9rem 1.3rem;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  width: 100%;
+  background: var(--light-brown);
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 4rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 0.8;
+  font-weight: 200;
+}
+
+header p {
+  font-size: 2rem;
+  margin: 0;
+}
+
+main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+  width: 60%;
+  margin: 1rem auto;
+  background-color: var(--dark-gray);
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.main-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  border: 5px solid var(--brown);
+  margin-top: 1rem;
+}
+
+.main-top h2 {
+  font-size: 2rem;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+input {
+  font-family: var(--font);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.library {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.card {
+  border: 3px solid var(--brown);
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: var(--white);
+}
+
+.card h2 {
+  margin: 0;
+}
+
+.card p {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.button-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75em;
+}
+
+.butRead,
+.removeBook {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.red {
+  color: var(--red);
+}
+
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  background-color: var(--brown);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+footer p {
+  font-size: 1.3rem;
+}
+
+.social-box {
+  display: flex;
+}
+
+footer svg {
+  width: 3rem;
+  margin: 0 1rem;
+}
+
+#facebook {
+  fill: var(--facebook);
+}
+
+#github {
+  fill: var(--github);
+}
+
+#twitter {
+  fill: var(--twitter);
+}
+
+#linkedin {
+  fill: var(--linkedin);
+}

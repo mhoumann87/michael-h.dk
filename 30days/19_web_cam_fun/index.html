@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>michael-h.dk - 30 days of JavaScript</title>
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:300,400,600|Syncopate:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+
+  <body>
+
+    <header>
+      <div class="branding">
+        <div class="text">
+          <h1><a href="../index.html">michael-h.dk</a></h1>
+          <p>Multimedia Designer and Web Developer</p>
+        </div>
+      </div>
+      <nav>
+        <div class="button"><a href="../index.html">30daysJS</a></div>
+      </nav>
+    </header>
+
+    <div class="breadcrumbs">
+      <div class="crumbs-links">
+        <a class="crumb" href="../index.html">30daysJS</a>
+        <a class="crumb" href="./index.html">Webcam Fun</a>
+      </div>
+      <div class="site-id">
+        Webcam Fun
+      </div>
+    </div>
+
+    <main>
+      <h2>Webcam Fun</h2>
+      <p>None of your data will leave your computer, all images and effects are generated on your computer.</p>
+      <div class="select-effect">
+        <form id="select">
+          <div class="input">
+            <input type="radio" name="effect" value="photoBooth" checked>Photo Booth<br>
+          </div>
+          <div class="input">
+            <input type="radio" name="effect" value="redEffect">Red Effect<br>
+          </div>
+          <div class="input">
+            <input type="radio" name="effect" value="rgb">RBG effect<br>
+          </div>
+        </form>
+        </form>
+        <div class="canvas-box">
+          <canvas class="photo"></canvas>
+          <video class="player"></video>
+          <div class="strip"></div>
+          <div class="controls"></div>
+        </div>
+    </main>
+    <footer>
+      <!--Are going to work with the rest of the website -->
+      <div class="contact">
+        <p>
+          <a href="https://twitter.com/intent/tweet?screen_name=michaelhoumann&ref_src=twsrc%5Etfw" class="twitter-mention-button"
+            data-show-count="false">Tweet to @michaelhoumann</a>
+        </p>
+        <p>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <a href="mailto:michael@michael-h.dk"><i class="fas fa-envelope"></i>&nbsp;Send E-mail</a>
+        </p>
+      </div>
+
+      <div class="copy">
+
+        <p>
+          Photo by <a href="https://unsplash.com/@skabrera" target="_blank">
+            Sergi Kabrera
+          </a>
+          on
+          <a href="https://unsplash.com/" target="_blank">
+            Unsplash
+          </a>
+        </p>
+        <p>
+          Web design and development
+          <span id="copy"></span>
+          Michael Houmann
+        </p>
+      </div>
+
+      <div class="social">
+
+        <div><a href="https://www.linkedin.com/in/michael-houmann-3b03654b/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+        <div><a href="https://twitter.com/MichaelHoumann" target="_blank"><i class="fab fa-twitter"></i></a></div>
+        <div><a href="https://www.freecodecamp.org/mhoumann87" target="_blank"><i class="fab fa-free-code-camp"></i></a></div>
+        <div><a href="https://codepen.io/michael-h/" target="_blank"><i class="fab fa-codepen"></i></a></div>
+        <div><a href="https://github.com/mhoumann87/" target="_blank"><i class="fab fa-github"></i></a></div>
+
+      </div>
+    </footer>
+
+    <script src="./javascript/web-cam-fun.js"></script>
+  </body>
+
+</html>

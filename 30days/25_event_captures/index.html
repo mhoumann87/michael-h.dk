@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>michael-h.dk - 30 days of JavaScript</title>
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:300,400,600|Syncopate:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+
+  <body>
+
+    <header>
+      <div class="branding">
+        <div class="text">
+          <h1><a href="../index.html">michael-h.dk</a></h1>
+          <p>Multimedia Designer and Web Developer</p>
+        </div>
+      </div>
+      <nav>
+        <div class="button"><a href="../index.html">30daysJS</a></div>
+      </nav>
+    </header>
+
+    <div class="breadcrumbs">
+      <div class="crumbs-links">
+        <a class="crumb" href="../index.html">30daysJS</a>
+        <a class="crumb" href="./index.html">
+          <!-- Event Capture, --> Propagation, Bubbling and Once</a>
+      </div>
+      <div class="site-id">
+        <!-- Event Capture, --> Propagation, Bubbling and Once
+      </div>
+    </div>
+
+    <main>
+      <section class="presentation">
+        <div class="presentation-photo">
+          <img src="./images/kobu-agency-409288-unsplash.jpg" alt="Photo by Kobu Agency on Unsplash.com">
+        </div>
+        <article class="presentation-text">
+          <h2>
+            <!-- Event Capture, --> Propagation, Bubbling and Once</h2>
+          <p>When you make an application, sometimes you nedde to get some input from the user. In Javascript, you most
+            likely will use the <em>addEventListener</em>, and make a callback function fire when the user interacts.</p>
+          <p>What I didn't know (among a lot of things) was, that it is not only the element that have the
+            eventListener added, that are affected byt the user action, but all of the parents to the element are
+            registering the action.</p>
+          <p>It is not something you normally notice, and normally it is not a problem, but if you have some nested
+            elements with an eventListener, you will see this happend.</p>
+          <p>I will try to make a small demostaration here. I hope it makes any sense.</p>
+          <p>If this have spiked your interest, you can find a great article <a href="https://medium.com/@vsvaibhav2016/event-bubbling-and-event-capturing-in-javascript-6ff38bec30e"
+              target="_blank">here on Medium</a>, where <a href="https://medium.com/@vsvaibhav2016" target="_blank">Vaibhav
+              Sharma</a> explain this in a really good way,</p>
+        </article>
+      </section>
+
+      <div class="exampels">
+
+        <section class="bubbel">
+          <div class="explain">
+            <div class="explain-text">
+              <h3>Event Bubbling</h3>
+              <p>When you have some nested elements, with the same sort of eventListener attached, the effect of the
+                user interaction will <em>bubble</em> up the chain.</p>
+              <p>Here we have 3 divs nested inside each other, and with the bubbeling, when you click on the one on the
+                inside, the otheres will also register the click.</p>
+            </div>
+            <div class="explain-code">
+              <h3>The Code</h3>
+              <code>
+                const allDivs = document.querySelectorAll('.exDivs');<br>
+                <br>
+                function changeColor(event) {<br>
+                &nbsp;this.classList.add('reverseColor');<br>
+                }<br>
+                <br>
+                allDivs.forEach(div => div.addEventListener('click', changeColor));
+              </code>
+            </div>
+          </div>
+
+          <div class="bubble-example">
+            <div class="bubExample outer-box">
+              <p>Click Me</p>
+              <div class="bubExample middle-box">
+                <p>Click Me</p>
+                <div class="bubExample inner-box">
+                  <p>Click Me</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 
+          <section class="capture">
+            <div class="explain">
+              <div class="explain-text">
+                <h3>Event Capture</h3>
+                <p>You can reverse the effect, by adding the event capture option in the event listener.</p>
+                <p>From the <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"
+                    target="_blank">MDN Docs</a>:
+                  <blockquote>capture: A Boolean indicating that events of this type will be dispatched to the
+                    registered listener before being dispatched to any EventTarget beneath it in the DOM tree.</blockquote>
+                </p>
+              </div>
+              <div class="explain-code">
+                <h3>The Code</h3>
+                <code>
+                  const allDivs = document.querySelectorAll('.exDivs');<br>
+                  <br>
+                  function changeColor(event) {<br>
+                  &nbsp;this.classList.add('reverseColor');<br>
+                  }<br>
+                  <br>
+                  allDivs.forEach(div => div.addEventListener('click', changeColor, true));
+                </code>
+              </div>
+            </div>
+
+            <div class="capture-example">
+              <div class="capExample outer-box">
+                <p>Click Me</p>
+                <div class="capExample middle-box">
+                  <p>Click Me</p>
+                  <div class="capExample inner-box">
+                    <p>Click Me</p>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+          <section class="stop-propagation">
+            <div class="explain">
+              <div class="explain-text">
+                <h3>Stop Propagation</h3>
+                <p>You can prevent this to happend by adding a stopPropagation for the event in your code.</p>
+              </div>
+              <div class="explain-code">
+                <h3>The Code</h3>
+                <code>
+                  const allDivs = document.querySelectorAll('.exDivs');<br>
+                  <br>
+                  function changeColor(event) {<br>
+                  event.stopPropagation();<br>
+                  &nbsp;this.classList.add('reverseColor');<br>
+                  }<br>
+                  <br>
+                  allDivs.forEach(div => div.addEventListener('click', changeColor));
+                </code>
+              </div>
+            </div>
+
+            <div class="propagation-example">
+              <div class="propaExample outer-box">
+                <p>Click Me</p>
+                <div class="propaExample middle-box">
+                  <p>Click Me</p>
+                  <div class="propaExample inner-box">
+                    <p>Click Me</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <section class="once">
+            <div class="explain">
+              <div class="explain-text">
+                <h3>Once</h3>
+                <p>
+                  If you have an element on a page, you weant to be sure only can be used one time, you can add the
+                  <em>Once
+                    option</em> to your eventlistener.
+                  After the function have run onetime, the eventlistener will be removed. From the documentation on
+                  <a href="https://https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"
+                    target="_blank">MDN</a>:<blockquote>once:
+                    A Boolean indicating that the listener should be invoked at most once after being added. If true,
+                    the
+                    listener would be automatically removed when invoked.</blockquote>
+                </p>
+              </div>
+              <div class="explain-code">
+                <h3>The code:</h3>
+                <code>element.addEventListener('click', runFunction, {once: true});</code>
+              </div>
+            </div>
+
+            <div class="once-examples">
+              <div class="demo">
+                <button id="moreTimes">You Can Click Me Many Times</button>
+                <p id="moreText"></p>
+              </div>
+              <div class="demo">
+                <button id="oneTime">You Can Only Click Me One Time</button>
+                <p id="onceText"></p>
+              </div>
+            </div>
+
+          </section>
+      </div>
+
+    </main>
+    <footer>
+      <!--Are going to work with the rest of the website -->
+      <div class="contact">
+        <p>
+          <a href="https://twitter.com/intent/tweet?screen_name=michaelhoumann&ref_src=twsrc%5Etfw" class="twitter-mention-button"
+            data-show-count="false">Tweet to @michaelhoumann</a>
+        </p>
+        <p>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <a href="mailto:michael@michael-h.dk"><i class="fas fa-envelope"></i>&nbsp;Send E-mail</a>
+        </p>
+      </div>
+
+      <div class="copy">
+
+        <p>
+          Photo by <a href="https://unsplash.com/@kobuagency" target="_blank">
+            Kobu Agency
+          </a>
+          on
+          <a href="https://unsplash.com/" target="_blank">
+            Unsplash
+          </a>
+        </p>
+        <p>
+          Web design and development
+          <span id="copy"></span>
+          Michael Houmann
+        </p>
+      </div>
+
+      <div class="social">
+
+        <div><a href="https://www.linkedin.com/in/michael-houmann-3b03654b/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+        <div><a href="https://twitter.com/MichaelHoumann" target="_blank"><i class="fab fa-twitter"></i></a></div>
+        <div><a href="https://www.freecodecamp.org/mhoumann87" target="_blank"><i class="fab fa-free-code-camp"></i></a></div>
+        <div><a href="https://codepen.io/michael-h/" target="_blank"><i class="fab fa-codepen"></i></a></div>
+        <div><a href="https://github.com/mhoumann87/" target="_blank"><i class="fab fa-github"></i></a></div>
+
+      </div>
+    </footer>
+
+    <script src="./javascript/event_captures.js"></script>
+  </body>
+
+</html>

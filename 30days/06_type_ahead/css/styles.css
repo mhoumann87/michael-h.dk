@@ -1,0 +1,369 @@
+/* Base */
+body {
+  width: 100%;
+  background-color: #9dd3ff;
+  color: #282828;
+  font-size: 90%;
+  font-family: 'Mukta Malar', sans-serif;
+}
+
+@media screen and (min-width: 56.25rem) {
+  body {
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 112.5rem) {
+  body {
+    width: 112.5rem;
+    margin: 0 auto;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 700;
+}
+
+a,
+a:visited,
+a:active {
+  color: #282828;
+}
+
+a:hover {
+  color: #a14000;
+}
+
+/* Header */
+header {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.branding {
+  width: 100%;
+}
+
+.text {
+  background-color: #fff;
+  padding: 0.8rem;
+}
+
+.text h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.text a,
+.text a:hover {
+  color: #282828;
+  text-decoration: none;
+  margin: 0;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.25em) {
+    header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .branding {
+      display: grid;
+      background-image: url('../images/cv_top.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      width: 50%;
+    }
+
+    .text {
+      grid: 1;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .text h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+  }
+}
+
+/* Navigation */
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-end;
+  list-style: none;
+}
+
+nav li {
+  padding: 1rem;
+}
+
+nav li a {
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav li a:hover,
+nav li a:active,
+nav li a:focus {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+nav .current {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+/* Breadcrumb line */
+
+.breadcrumbs {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px 5px 0;
+  background-color: #5e6acc;
+  color: #fff;
+}
+
+.crumb::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f0a9';
+  margin: 0 10px;
+}
+
+.breadcrumbs a,
+.breadcrumbs a:visited,
+.breadcrumbs a:active,
+.breadcrumbs a:hover {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.25em) {
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-items: flex-end;
+    }
+
+    .button a {
+      font-weight: 600;
+      font-size: 1.3rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: #5e6acc;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+footer a,
+footer a:visited,
+footer a:active {
+  color: #fff;
+}
+
+.contact {
+  display: none;
+}
+
+.contact a {
+  margin-bottom: 10px;
+}
+
+.social a {
+  font-size: 1.5rem;
+}
+
+.copy {
+  text-align: center;
+}
+
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.25rem) {
+    footer {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+    }
+
+    .contact a {
+      margin-bottom: 10px;
+    }
+
+    .social a {
+      font-size: 1.5rem;
+    }
+
+    .copy {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .social {
+      width: auto;
+      flex-grow: 1;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}
+
+/* Main Section*/
+
+main {
+  min-height: 85vh;
+  background-image: url('../images/kelsey-knight-452154-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin: 0;
+}
+
+.site-info {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.site-info img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+}
+
+.site-info blockquote {
+  margin: 0.8rem 0.8rem 0.8rem 0;
+}
+
+.site-info h2,
+.site-info p {
+  margin: 0;
+}
+
+.background-color {
+  min-height: 85vh;
+  background-color: rgba(245, 245, 245, 0.7);
+  padding-bottom: 2rem;
+}
+
+.search-div {
+  padding: 0 10px;
+}
+
+.search-div h4 {
+  font-family: 'Mukta Malar', sans-serif;
+  font-size: 2rem;
+}
+
+.search-box {
+  max-width: 550px;
+  margin: 0 auto;
+  background-color: rgba(245, 245, 245, 0.6);
+  padding: 20px;
+}
+
+.search-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border: none;
+  padding: 10px;
+  font-family: 'Mukta Malar', sans-serif;
+  font-size: 1.2rem;
+}
+
+.search-form ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search-form ul li {
+  padding: 15px;
+  background-color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-form ul li:nth-child(odd) {
+  background-color: #9dd3ff;
+}
+
+.search-form ul li:not(:last-child) {
+  border-bottom: 2px solid #282828;
+}
+
+.highlight {
+  background: rgb(241, 166, 166);
+}
+
+blockquote {
+  background-color: #fff;
+}
+
+blockquote::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f10e';
+  margin: 0 10px;
+}
+
+blockquote::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f10d';
+  margin: 0 10px;
+}

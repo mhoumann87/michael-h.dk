@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  padding-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+p,
+a {
+  font-family: 'Hind', sans-serif;
+}
+
+a {
+  color: #282828;
+}
+
+a:hover {
+  color: red;
+}
+
+header {
+  height: 75vh;
+  background-image: url("../images/janaya-dasiuk-375823-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+}
+
+.header-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-text h1 {
+  font-size: 7rem;
+  margin: 0;
+}
+
+.header-text a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+}
+
+.wrapper {
+  transform: scale(0.98);
+  transition: transform 0.5s;
+}
+
+body.fixed-nav .wrapper {
+  transform: scale(1);
+}
+
+.header-text p {
+  font-size: 2rem;
+
+}
+
+footer {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+footer p,
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: red;
+}
+
+.social {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  flex: 0 0 33%;
+}
+
+nav {
+  background-color: #282828;
+  top: 0;
+  width: 100%;
+  transition: all 0.5s;
+  position: relative;
+  z-index: 1;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding: 10px 0;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+}
+
+body.fixed-nav nav {
+  position: fixed;
+}
+
+.fixed-nav li.logo {
+  max-width: 200px;
+}
+
+main {
+  margin: 0;
+}
+
+section {
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+section:nth-child(even) {
+  background: lightgray;
+}
+
+.box {
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.box .photo {
+  margin: 0 2rem;
+  flex: 1 1 50%;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  max-width: 450px;
+}
+
+.box .text {
+  flex: 0 0 49%;
+}
+
+.thanks {
+  width: 85%;
+  margin: 0 auto 3rem auto;
+  padding: 1rem;
+}
+
+li.logo {
+  max-width: 0;
+  overflow: hidden;
+  background: white;
+  transition: all 0.5s;
+}
+
+li.logo a {
+  color: #282828;
+}

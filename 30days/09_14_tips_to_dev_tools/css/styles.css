@@ -1,0 +1,299 @@
+/* Base */
+body {
+  width: 100%;
+  background-color: #ffc968;
+  color: #282828;
+  font-size: 90%;
+  font-family: 'Mukta Malar', sans-serif;
+}
+
+@media screen and (min-width: 56.25rem) {
+  body {
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 112.5rem) {
+  body {
+    width: 112.5rem;
+    margin: 0 auto;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 700;
+}
+
+a,
+a:visited,
+a:active {
+  color: #282828;
+}
+
+a:hover {
+  color: #0da5ec;
+}
+
+/* Header */
+header {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.branding {
+  width: 100%;
+}
+
+.text {
+  padding: 0.8rem;
+}
+
+.text h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.text a,
+.text a:hover {
+  color: #282828;
+  text-decoration: none;
+  margin: 0;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.25em) {
+    header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .branding {
+      display: grid;
+      background-image: url('../images/cv_top.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      width: 50%;
+    }
+
+    .text {
+      grid: 1;
+      background-color: rgba(255, 201, 104, 0.3);
+    }
+
+    .text h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+  }
+}
+
+/* Navigation */
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-end;
+  list-style: none;
+}
+
+nav li {
+  padding: 1rem;
+}
+
+nav li a {
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav li a:hover,
+nav li a:active,
+nav li a:focus {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+nav .current {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+/* Breadcrumb line */
+
+.breadcrumbs {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px 5px 0;
+  background-color: #ffc922;
+  color: #282828;
+}
+
+.crumb::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f0a9';
+  margin: 0 10px;
+}
+
+.breadcrumbs a,
+.breadcrumbs a:visited,
+.breadcrumbs a:active,
+.breadcrumbs a:hover {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #282828;
+  cursor: pointer;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.25em) {
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-items: flex-end;
+    }
+
+    .button a {
+      font-weight: 600;
+      font-size: 1.3rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: #ffc922;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #282828;
+}
+
+.contact {
+  display: none;
+}
+
+.contact a {
+  margin-bottom: 10px;
+}
+
+.social a {
+  font-size: 1.5rem;
+}
+
+.copy {
+  text-align: center;
+}
+
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer a,
+footer a:visited,
+footer a:active,
+footer a:hover {
+  color: #282828;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.25rem) {
+    footer {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+    }
+
+    .contact a {
+      margin-bottom: 10px;
+    }
+
+    .social a {
+      font-size: 1.5rem;
+    }
+
+    .copy {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .social {
+      width: auto;
+      flex-grow: 1;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}
+
+/*Main Section*/
+main {
+  padding: 2rem 10px;
+}
+
+.dev-present {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.dev-text {
+  flex: 0 0 55%;
+}
+
+.dev-photo {
+  flex: 0 0 40%;
+}
+
+.dev-photo img {
+  width: 100%;
+  height: auto;
+}
+
+blockquote {
+  background-color: #ffc922;
+}
+
+blockquote::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f10e';
+  margin: 0 10px;
+}
+
+blockquote::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f10d';
+  margin: 0 10px;
+}

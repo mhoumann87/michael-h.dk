@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>michael-h.dk - 30 days of JavaScript</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:300,400,600|Space+Mono|Syncopate:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="branding">
+      <div class="text">
+        <h1><a href="../../index.html">michael-h.dk</a></h1>
+        <p>Multimedia Designer and Web Developer</p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a class="current" href="../index.html">30 Days of Javascript</a></li>
+        <li><a href="../../javascript/index.html">Javascript Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="breadcrumbs">
+    <div class="crumbs-links">
+      <a class="crumb" href="../index.html">30daysJS</a>
+      <a class="crumb" href="./index.html">Array Cardio 1</a>
+    </div>
+    <div class="site-id">
+      Array Cardio 1
+    </div>
+  </div>
+
+  <main>
+
+    <section class="sec-head">
+
+      <div class="top-photo">
+        <img src="./images/samuel-zeller-34751-unsplash.jpg" alt="Photo by Samuel Zeller from Unsplash.com">
+      </div>
+
+      <div class="head-text">
+        <h2>Array Cardio 1</h2>
+        <p>From the<a href="https://en.wikipedia.org/wiki/Array_data_structure" target="_blank">Wikipedia article</a>:
+          <blockquote>In computer science, an array data structure, or simply an array, is a data structure consisting
+            of
+            a
+            collection of elements (values or variables), each identified by at least one array index or key. An array
+            is
+            stored such that the position of each element can be computed from its index tuple by a mathematical
+            formula. The simplest type of data structure is a linear array, also called one-dimensional array.</blockquote>
+        </p>
+        <p>In all programming languages there are multiple ways to work with an array. Most of the time it is happening
+          invisible to the user, but here I will try to show how you can use the methods of working with arrays in
+          JavaScript.</p>
+      </div>
+
+    </section>
+
+    <section class="inventors">
+
+      <div class="present">
+        <div class="inv-text">
+          <h3>Inventors</h3>
+          <p>The first dataset I work on, is an array of inventors with firstname, lastname, year of birth and year of
+            death.</p>
+          <p>The dataset comes from <a href="https://javascript30.com/" target="_blank">javascript30.com</a>.</p>
+        </div>
+
+        <div class="invDataset">
+          <span id="invData"></span>
+        </div>
+
+      </div>
+      <section class="filter">
+
+        <div class="ex-present">
+          <div class="exText">
+            <h4>1. Array.prototype.filter()</h4>
+            <p>From <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+                target="_blank">MDN web docs</a>:</p>
+            <blockquote>The filter() method creates a new array with all elements that pass the test implemented by the
+              provided function.</blockquote>
+          </div>
+
+          <div class="code">
+            <p>Find the inventors born between two years provided by the user</p>
+            <div class="snippet">
+              <code>const filteredInventors = inventors.filter(inventor => (inventor.year >= yearOne && inventor.year <= yearTwo));</code>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="formbox">
+          <h4>Show inventor born in a time periode</h4>
+          <form id="show-inv">
+            <label for="low">Enter the lowest year: </label>
+            <input type="number" min="0" name="low" id="invLow">
+            <label for="low">Enter the highest year: </label>
+            <input type="number" min="0" name="high" id="invHigh">
+            <button type="submit">Show Inventors</button>
+
+          </form>
+        </div>
+        <div class="show-inv">
+          <div class="inv-errror"></div>
+          <div class="invGrid">
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="map">
+
+        <div class="ex-present">
+          <div class="exText">
+            <h4>2. Array.prototype.map()</h4>
+            <p>From <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+                target="_blank">MDN web docs</a>:</p>
+            <blockquote>The map() method creates a new array with the results of calling a provided function on every
+              element in the calling array.</blockquote>
+          </div>
+
+          <div class="code">
+            <p>Make an array of first- and lastnames of the inventors</p>
+            <div class="snippet">
+              <code>const onlyNames = inventors.map(inventor => `${inventor.first} ${inventor.last}` );</code>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="map-result">
+          <code class="showMap"></code>
+        </div>
+
+      </section>
+
+      <section class="sort">
+
+        <div class="ex-present">
+
+          <div class="ex-text">
+
+            <h4>3. Array.prototype.sort()</h4>
+
+            <p>From <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"
+                target="_blank">MDN web docs</a>:</p>
+            <blockquote>The sort() method sorts the elements of an array in place and returns the array. The sort is
+              not necessarily stable. The default sort order is according to string Unicode code points.
+              The time and space complexity of the sort cannot be guaranteed as it is implementation dependent.
+            </blockquote>
+
+          </div>
+
+          <div class="code">
+
+            <p>Sort the inventors based on user input</p>
+
+            <div class="snippet">
+
+              <code>sortedInventors = inventors.sort((a, b) => a.last > b.last ? 1 : -1);</code>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="sort-result">
+
+          <p>Choose how to sort inventors:</p>
+          <form id="choose-sort">
+            <label for="first">First Name: </label>
+            <input type="radio" name="sort" value="first" checked>
+            <label for="last">Last Name: </label>
+            <input type="radio" name="sort" value="last">
+            <label for="year">Birth Year: </label>
+            <input type="radio" name="sort" value="year">
+            <label for="passed">Year Passed: </label>
+            <input type="radio" name="sort" value="passed">
+            <!-- <label for="age">Age: </label>
+            <input type="radio" name="sort" value="age">-->
+          </form>
+
+        </div>
+
+        <div class="showSortedInventors"></div>
+
+      </section>
+
+      <section class="reduce">
+
+        <div class="ex-present">
+
+          <div class="exText">
+            <h4>4. Array.prototype.reduce()</h4>
+            <p>From <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"
+                target="_blank">MDN web docs</a>:</p>
+            <blockquote>The reduce() method executes a reducer function (that you provide) on each member of the array
+              resulting in a single output value.</blockquote>
+          </div>
+
+          <div class="code">
+            <p>Find the toltal years all the invnetors lived</p>
+            <div class="snippet">
+              <code>const totalAge = inventors.reduce((total, inventor) => { 
+                return total + (inventor.passed - inventor.year)}, 0);</code>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="result-reduce">
+          <p id="resTotalAge"></p>
+        </div>
+
+        <div class="ex-present">
+
+          <div class="exText">
+            <h4><i class="fab fa-js-square"></i>&nbsp;reduce() 2</h4>
+            <p>The reduce() function can also be used to count all instances of values in an object.</p>
+          </div>
+
+          <div class="code">
+            <p>The dataset for this example:</p>
+            <div class="snippet">
+              <code>const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick'];
+                  </code>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="result-transport" id="countInstance">
+
+        </div>
+
+
+
+      </section>
+
+    </section>
+  </main>
+  <footer>
+    <!--Are going to work with the rest of the website -->
+    <div class="contact">
+      <a href="https://twitter.com/intent/tweet?screen_name=michaelhoumann&ref_src=twsrc%5Etfw" class="twitter-mention-button"
+        data-show-count="false">Tweet to @michaelhoumann</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <a href="mailto:michael@michael-h.dk"><i class="fas fa-envelope"></i>&nbsp;Send E-mail</a>
+    </div>
+
+    <div class="copy">
+
+      <p>
+        Photo by <a href="https://unsplash.com/@samuelzeller" target="_blank">
+          Samuel Zeller
+        </a>
+        on
+        <a href="https://unsplash.com/" target="_blank">
+          Unsplash
+        </a>
+      </p>
+      <p>
+        Web design and development
+        <span id="copy"></span>
+        Michael Houmann
+      </p>
+    </div>
+
+    <div class="social">
+
+      <div><a href="https://www.facebook.com/michael.houmann" target="_blank"><i class="fab fa-facebook-square"></i></a></div>
+      <div><a href="https://github.com/mhoumann87/" target="_blank"><i class="fab fa-github"></i></a></div>
+      <div><a href="https://twitter.com/MichaelHoumann" target="_blank"><i class="fab fa-twitter"></i></a></div>
+      <div><a href="https://www.linkedin.com/in/michael-houmann-3b03654b/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+
+    </div>
+  </footer>
+
+  <script src="./javascript/array_cardio.js"></script>
+</body>
+
+</html>

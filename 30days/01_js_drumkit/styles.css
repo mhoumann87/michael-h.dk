@@ -1,0 +1,232 @@
+/* Base */
+body {
+  background-color: #262626;
+  color: #e0e0e0;
+  font-size: 100%;
+  font-family: 'Mukta Malar', sans-serif;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto ifr auto;
+  grid-template-areas: 'header' 'breadcrumbs' 'main' 'footer';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 700;
+}
+
+a,
+a:visited,
+a:active {
+  color: #bfbfbf;
+}
+
+a:hover {
+  color: #a14000;
+}
+
+/* Header */
+header {
+  grid-area: header;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.branding {
+  display: grid;
+  background-image: url('./images/port_top.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  width: 50%;
+}
+
+.text {
+  grid: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.8rem;
+}
+
+.text h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.text p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.text a,
+.text a:hover {
+  color: #fff;
+  text-decoration: none;
+  margin: 0;
+}
+
+/* Navigation */
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-end;
+  list-style: none;
+}
+
+nav li {
+  padding: 1rem;
+}
+
+nav li a {
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav li a:hover,
+nav li a:active,
+nav li a:focus {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+nav .current {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+/* Breadcrumb line */
+
+.breadcrumbs {
+  grid-area: breadcrumbs;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 20px 5px 0;
+  background-color: #000;
+}
+
+.crumb::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f0a9';
+  margin: 0 10px;
+}
+
+.breadcrumbs a,
+.breadcrumbs a:visited,
+.breadcrumbs a:active,
+.breadcrumbs a:hover {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Main Content */
+
+main {
+  grid-area: main;
+  display: grid;
+  margin: 0;
+  width: 100%;
+  min-height: 60vh;
+  background-image: url('./images/israel-palacio-454387-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.drums {
+  grid: 1;
+  background-color: rgba(28, 28, 28, 0.7);
+}
+
+.headline {
+  text-align: center;
+}
+
+.headline h2 {
+  margin: 0;
+  font-size: 3rem;
+  padding-top: 4rem;
+}
+
+.kit {
+  margin: 4rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.drum-but {
+  font-size: 1.4rem;
+  width: 7rem;
+  height: 7rem;
+  text-align: center;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.07s ease;
+  text-shadow: 0 0 0.5rem #000;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #a14000;
+  box-shadow: 0 0 1rem #000;
+  background-color: rgba(28, 28, 28, 0.9);
+}
+
+/* Drums */
+
+/* Footer */
+
+footer {
+  grid-area: footer;
+  background-color: #000;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+}
+
+.contact a {
+  margin-bottom: 10px;
+}
+
+.social a {
+  font-size: 1.5rem;
+}
+
+.copy {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.social {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}

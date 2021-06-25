@@ -1,0 +1,88 @@
+/* Reset default browser styler so the site will look alike on all */
+/* Based on https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css */
+
+/* Use border-box globally */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* Remove the border on body and set base font-size */
+body {
+  border: none;
+  font-size: 16px;
+}
+
+/* Maintain 'hidden' behaviour when overriding 'diaplay' values */
+[hidden] {
+  display: none;
+}
+
+/* Set headings units to rem, remain the size */
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.17rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.83rem;
+}
+h6 {
+  font-size: 0.67rem;
+}
+
+/* make the hr element uniform on all browsers */
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
+  height: 0;
+  overflow: visible;
+}
+
+/* Set uniform values for these elements, vertical-aling is if the display value is over written */
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+/* audio without '[controls]' remains hidden */
+audio:not([controls]) {
+  display: none;
+}
+
+/* These elements display inline by default, but that is not the expected behaviour for either, Can mess with layout and aspect-ratio handeling */
+
+/* Remove the unnessesary wrapping, while maintaining contents */
+picture {
+  display: contents;
+}
+
+/* Source have nothing to show, so we hide them entierly */
+source {
+  display: none;
+}
+
+/* Remove default width of 300px */
+audio {
+  width: 100%;
+}

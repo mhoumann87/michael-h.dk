@@ -1,0 +1,372 @@
+/* 
+* Variables
+*/
+
+:root {
+  --background: #282828;
+  --accent: #000000;
+  --rgba: rgba(0, 0, 0, .6);
+  --font: #ffffff;
+  --accent-font: #ffffff;
+  --link-hover: #72106E;
+  --body-font: 'Nunito Sans', sans-serif;
+  --headline-font: 'Nanum Gothic', sans-serif;
+}
+
+/* Base */
+body {
+  width: 100%;
+  background-color: var(--background);
+  color: var(--font);
+  font-size: 90%;
+  font-family: var(--body-font);
+}
+
+@media screen and (min-width: 56.250rem) {
+
+  body {
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 112.500rem) {
+
+  body {
+    width: 112.500rem;
+    margin: 0 auto;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headline-font);
+}
+
+a,
+a:visited,
+a:active {
+  color: var(--font);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* Header */
+header {
+  min-height: 65vh;
+  background-image: url(../images/osman-rana-714159-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.branding {
+  min-height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--rgba);
+}
+
+header h1 {
+  font-size: 9rem;
+  font-weight: 200;
+  margin: 0
+}
+
+header a,
+header a:visited,
+header a:active,
+header a:hover {
+  color: var(--font);
+  text-decoration: none;
+}
+
+header p {
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--accent);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 1.3rem;
+}
+
+nav a {
+  font-size: 1.6rem;
+}
+
+
+
+/* Footer */
+
+footer {
+  background-color: var(--accent);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--accent-font);
+}
+
+.contact {
+  display: none;
+}
+
+.contact a {
+  margin-bottom: 10px;
+}
+
+.social a {
+  font-size: 1.5rem;
+}
+
+.copy {
+  text-align: center;
+}
+
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+footer a,
+footer a:visited,
+footer a:active {
+  color: var(--accent-font);
+}
+
+footer a:hover {
+  color: var(--link-hover);
+}
+
+
+
+@supports (grid-area: auto) {
+
+  @media screen and (min-width: 56.250rem) {
+    footer {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+    }
+
+    .contact a {
+      margin-bottom: 10px;
+    }
+
+    .social a {
+      font-size: 1.5rem;
+    }
+
+    .copy {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .social {
+      width: auto;
+      flex-grow: 1;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}
+
+/* 
+* Main Section
+*/
+main {
+  font-family: 'Architects Daughter', cursive;
+}
+
+.game {
+  width: 50%;
+  margin: 2rem auto;
+  background-color: #16A9E8;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.game-header {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.game-header h2 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.game-over {
+  opacity: 1;
+}
+
+.game-header p {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.game-over p {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.game-over.no-show {
+  opacity: 0;
+}
+
+.controls {
+  width: 100%;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls p {
+  font-size: 1.4rem;
+}
+
+.start-box {
+  flex: 1 0 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.diff {
+  flex: 1 0 75%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+button {
+  font-size: 1.4rem;
+  padding: 10px;
+  border: 0;
+  background-color: var(--font);
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, .2);
+}
+
+button.mode {
+  border: 2px solid transparent;
+}
+
+button.mode.active {
+  border: 2px solid black;
+
+}
+
+
+
+.easy {
+  background: green;
+  color: var(--font);
+}
+
+.normal {
+  background: yellow;
+  color: #000000;
+  ;
+}
+
+.hard {
+  background: red;
+  color: var(--font);
+}
+
+.game-board {
+
+  width: 600px;
+  height: 400px;
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole::after {
+  display: block;
+  background-image: url(../images/dirt.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+  background-image: url(../images/mole.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: all .4s;
+}
+
+.hole.up .mole {
+  top: 0;
+}
+
+.high-score {
+  font-size: 1.4rem;
+  display: none;
+}
+
+.high-score>ul {
+  list-style: none;
+}
+
+.high-score>ul>li {
+  margin-bottom: .6rem;
+}
+
+.high-score-show {
+  display: block;
+}

@@ -1,0 +1,354 @@
+/* 
+* Variables
+*/
+
+:root {
+  --background: #FFE1A2;
+  --accent: #ED8953;
+  --rgba: rgba(255, 225, 162, .8);
+  --font: #5D584A;
+  --link-hover: #BEDEC0;
+  --body-font: 'Mukta Malar', sans-serif;
+  --headline-font: 'Syncopate', sans-serif;
+}
+
+/* Base */
+body {
+  width: 100%;
+  background-color: var(--background);
+  color: var(--font);
+  font-size: 90%;
+  font-family: var(--body-font);
+}
+
+@media screen and (min-width: 56.250rem) {
+
+  body {
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 112.500rem) {
+
+  body {
+    width: 112.500rem;
+    margin: 0 auto;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headline-font);
+  font-weight: 700;
+}
+
+a,
+a:visited,
+a:active {
+  color: var(--font);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* Header */
+header {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.branding {
+  width: 100%;
+}
+
+.text {
+  background-color: var(--accent);
+  padding: .8rem;
+}
+
+.text h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+
+}
+
+.text a,
+.text a:hover {
+  color: var(--font);
+  text-decoration: none;
+  margin: 0;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.250em) {
+
+    header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .branding {
+      display: grid;
+      background-image: url("../images/top_keyboard.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      width: 50%;
+    }
+
+    .text {
+      grid: 1;
+      background-color: var(--rgba);
+    }
+
+    .text h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+  }
+
+}
+
+
+/* Navigation */
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.button {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.button a {
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Breadcrumb line */
+
+.breadcrumbs {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px 5px 0;
+  background-color: var(--accent);
+}
+
+.crumb::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0a9";
+  margin: 0 10px;
+}
+
+.breadcrumbs a,
+.breadcrumbs a:visited,
+.breadcrumbs a:active,
+.breadcrumbs a:hover {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--font);
+  cursor: pointer;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.250em) {
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-items: flex-end;
+    }
+
+    .button a {
+      font-weight: 600;
+      font-size: 1.3rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--accent);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact {
+  display: none;
+}
+
+.contact a {
+  margin-bottom: 10px;
+}
+
+.social a {
+  font-size: 1.5rem;
+}
+
+.copy {
+  text-align: center;
+}
+
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+
+
+@supports (grid-area: auto) {
+
+  @media screen and (min-width: 56.250rem) {
+    footer {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+    }
+
+    .contact a {
+      margin-bottom: 10px;
+    }
+
+    .social a {
+      font-size: 1.5rem;
+    }
+
+    .copy {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .social {
+      width: auto;
+      flex-grow: 1;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}
+
+/* 
+* Main Section
+*/
+
+code {
+  font-family: 'Space Mono', monospace;
+}
+
+main {
+
+  margin: 0;
+}
+
+.present-photo img {
+  width: 100%;
+  height: auto;
+}
+
+.present {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 10px;
+}
+
+.show-case {
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.show-case h5 {
+  font-family: var(--body-font);
+  margin: 0.5rem 0;
+}
+
+section:nth-child(even) {
+  background-color: #FFEFC5;
+}
+
+.examples {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+table {
+  margin: 0 auto;
+}
+
+table td {
+  padding: 5px 10px;
+}
+
+blockquote::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f10e";
+  margin: 0 10px;
+}
+
+blockquote::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f10d";
+  margin: 0 10px;
+}
+
+.examples-def {
+  flex: 0 0 40%;
+}
+
+@supports (grid-area: auto) {
+
+  @media screen and (min-width: 56.250rem) {
+
+    .present {
+      width: 100%;
+      flex-direction: row-reverse;
+    }
+
+    .present-text {
+      flex: 1 1 49%;
+    }
+
+    .present-photo {
+      flex: 0 0 49%;
+    }
+  }
+}
