@@ -7,3 +7,7 @@
 # soundfiles
 *.wav
 *.mp3
+
+
+# api keys
+/30days/21_geolocation/javascript/api_config.js
