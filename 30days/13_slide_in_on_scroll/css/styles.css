@@ -189,23 +189,6 @@ nav .current {
   cursor: pointer;
 }
 
-@supports (grid-area: auto) {
-  @media screen and (min-width: 56.25em) {
-    nav {
-      display: flex;
-      flex-direction: row;
-      justify-items: flex-end;
-    }
-
-    .button a {
-      font-weight: 600;
-      font-size: 1.3rem;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  }
-}
-
 /* Footer */
 
 footer {

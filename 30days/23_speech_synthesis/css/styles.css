@@ -3,12 +3,12 @@
 */
 
 :root {
-  --background: #FAF0EA;
-  --accent: #D2C5D5;
-  --rgba: rgba(255, 255, 255, .8);
+  --background: #faf0ea;
+  --accent: #d2c5d5;
+  --rgba: rgba(255, 255, 255, 0.8);
   --font: #282828;
   --accent-font: #282828;
-  --link-hover: #EAC867;
+  --link-hover: #eac867;
   --body-font: 'Mukta Malar', sans-serif;
   --headline-font: 'Syncopate', sans-serif;
 }
@@ -22,17 +22,15 @@ body {
   font-family: var(--body-font);
 }
 
-@media screen and (min-width: 56.250rem) {
-
+@media screen and (min-width: 56.25rem) {
   body {
     font-size: 100%;
   }
 }
 
-@media screen and (min-width: 112.500rem) {
-
+@media screen and (min-width: 112.5rem) {
   body {
-    width: 112.500rem;
+    width: 112.5rem;
     margin: 0 auto;
   }
 }
@@ -74,14 +72,13 @@ header {
 
 .text {
   background-color: var(--accent);
-  padding: .8rem;
+  padding: 0.8rem;
 }
 
 .text h1 {
   font-size: 2rem;
   font-weight: 400;
   margin: 0;
-
 }
 
 .text a,
@@ -92,8 +89,7 @@ header {
 }
 
 @supports (grid-area: auto) {
-  @media screen and (min-width: 56.250em) {
-
+  @media screen and (min-width: 56.25em) {
     header {
       flex-direction: row;
       justify-content: space-between;
@@ -102,7 +98,7 @@ header {
 
     .branding {
       display: grid;
-      background-image: url("../images/top_keyboard.jpg");
+      background-image: url('../images/top_keyboard.jpg');
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -118,29 +114,52 @@ header {
       font-size: 3rem;
       margin: 0;
     }
-
   }
-
 }
-
 
 /* Navigation */
 
 nav {
   display: flex;
-  justify-content: flex-start;
-}
-
-.button {
-  padding: 10px;
-  margin-right: 10px;
-}
-
-.button a {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.3rem;
+}
+
+.nav__div {
+  margin: 0.75rem 0;
+}
+
+nav a {
   text-decoration: none;
-  cursor: pointer;
+}
+
+nav a:hover,
+nav a:active,
+nav a:focus {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+nav .current {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.25em) {
+    nav {
+      flex-direction: row;
+      align-items: center;
+      margin-right: 1rem;
+    }
+
+    .nav__div {
+      margin: 0 0.75rem;
+    }
+  }
 }
 
 /* Breadcrumb line */
@@ -156,9 +175,9 @@ nav {
 }
 
 .crumb::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  content: "\f0a9";
+  content: '\f0a9';
   margin: 0 10px;
 }
 
@@ -170,24 +189,6 @@ nav {
   text-decoration: none;
   color: var(--accent-font);
   cursor: pointer;
-}
-
-@supports (grid-area: auto) {
-  @media screen and (min-width: 56.250em) {
-
-    nav {
-      display: flex;
-      flex-direction: row;
-      justify-items: flex-end;
-    }
-
-    .button a {
-      font-weight: 600;
-      font-size: 1.3rem;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  }
 }
 
 /* Footer */
@@ -222,7 +223,6 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-around;
-
 }
 
 footer a,
@@ -235,11 +235,8 @@ footer a:hover {
   color: var(--link-hover);
 }
 
-
-
 @supports (grid-area: auto) {
-
-  @media screen and (min-width: 56.250rem) {
+  @media screen and (min-width: 56.25rem) {
     footer {
       flex-direction: row;
       justify-content: space-between;
@@ -279,8 +276,7 @@ footer a:hover {
 */
 
 main {
-
-  background-image: url("../images/rock-n-roll-monkey-681546-unsplash.jpg");
+  background-image: url('../images/rock-n-roll-monkey-681546-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -312,7 +308,7 @@ select {
   margin-bottom: 2rem;
 }
 
-input[type=range] {
+input[type='range'] {
   margin-bottom: 2rem;
 }
 
@@ -327,7 +323,7 @@ textarea {
 }
 
 button {
-  padding: .5rem;
+  padding: 0.5rem;
   font-size: 1.1rem;
   border: none;
   outline: transparent;
@@ -336,10 +332,7 @@ button {
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-
-@media screen and (min-width: 56.250em) {
-
-
+@media screen and (min-width: 56.25em) {
   main {
     min-height: 75vh;
   }
