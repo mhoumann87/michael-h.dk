@@ -9,8 +9,8 @@
   --font: #353336;
   --accent-font: #f6f4f6;
   --link-hover: #828085;
-  --body-font: "Mukta Malar", sans-serif;
-  --headline-font: "Syncopate", sans-serif;
+  --body-font: 'Mukta Malar', sans-serif;
+  --headline-font: 'Syncopate', sans-serif;
 }
 
 /* Base */
@@ -98,7 +98,7 @@ header {
 
     .branding {
       display: grid;
-      background-image: url("../images/top_keyboard.jpg");
+      background-image: url('../images/top_keyboard.jpg');
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -121,19 +121,45 @@ header {
 
 nav {
   display: flex;
-  justify-content: flex-start;
-}
-
-.button {
-  padding: 10px;
-  margin-right: 10px;
-}
-
-.button a {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.3rem;
+}
+
+.nav__div {
+  margin: 0.75rem 0;
+}
+
+nav a {
   text-decoration: none;
-  cursor: pointer;
+}
+
+nav a:hover,
+nav a:active,
+nav a:focus {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+nav .current {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.25em) {
+    nav {
+      flex-direction: row;
+      align-items: center;
+      margin-right: 1rem;
+    }
+
+    .nav__div {
+      margin: 0 0.75rem;
+    }
+  }
 }
 
 /* Breadcrumb line */
@@ -149,9 +175,9 @@ nav {
 }
 
 .crumb::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  content: "\f0a9";
+  content: '\f0a9';
   margin: 0 10px;
 }
 

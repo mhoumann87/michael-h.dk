@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>michael-h.dk - 30 days of JavaScript</title>
+  <link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
+  <title>michael-h.dk - Copying VS. Reference</title>
   <link rel="stylesheet" href="../assets/css/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:300,400,600|Space+Mono|Syncopate:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
@@ -23,7 +24,18 @@
       </div>
     </div>
     <nav>
-      <div class="button"><a href="../index.html">30daysJS</a></div>
+      <div class="nav__div">
+        <a href="../../index.html">Home</a>
+      </div>
+
+      <div class="nav__div">
+        <a class="current" href="../index.html">30 Days of Javascript</a>
+      </div>
+
+      <div class="nav__div">
+        <a href="../../javascript/index.html">Javascript Projects</a>
+      </div>
+
     </nav>
   </header>
 
@@ -48,8 +60,8 @@
         <h2>JavaScript References VS Copying</h2>
         <p>Working with code in JavaScript, there are a lot of possibilities to make mistakes, and some times it could
           be your own fault.</p>
-        <p>One of the areas there are likely to make some errors in your code, is when you are changin the values in
-          variabled. It is not always that logical, but I will try to make it a little easier to understant.</p>
+        <p>One of the areas there are likely to make some errors in your code, is when you are changing the values in
+          variables. It is not always that logical, but I will try to make it a little easier to understand.</p>
         <p>I know that I have learned a lot just by making this page.</p>
         <p></p>
       </div>
@@ -168,18 +180,32 @@
             <td><code id="arrayCopy2"></code></td>
           </tr>
         </table>
+
         <p>As you can see both arrays changed their value. If your want to make a copy, that won't change values with
           the first, you have a few options.</p>
-        <p>1. You can use the slice() function:<br>
-          <blockquote>The slice() method returns a shallow copy of a portion of an array into a new array object
-            selected from begin to end (end not included). The original array will not be modified.</blockquote><br>
-          When you don't give any arguments, you make a direct copy of an array.<br>
+
+        <p>
+          1. You can use the slice() function:
+          
+          <br />
+
+          <blockquote>
+            The slice() method returns a shallow copy of a portion of an array into a new array object
+            selected from begin to end (end not included). The original array will not be modified.
+          </blockquote>
+          <br />
+
+          When you don't give any arguments, you make a direct copy of an array.
+          
+          <br />
+
           <code>let betterBeatles = beatles.slice()</code>
         </p>
+
         <p>2. You can use the concat() function:<br>
           <blockquote>The concat() method is used to merge two or more arrays. This method does not change the existing
             arrays, but instead returns a new array.</blockquote><br>
-          When you use the concat() methode with an empty array, you get a copy<br>
+          When you use the concat() method with an empty array, you get a copy<br>
           <code>let betterBeatles = [].concat(beatles);</code>
         </p>
         <p>3. You can use the new spread operator:<br>
@@ -324,11 +350,10 @@
 
     <div class="social">
 
-      <div><a href="https://www.linkedin.com/in/michael-houmann-3b03654b/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
-      <div><a href="https://twitter.com/MichaelHoumann" target="_blank"><i class="fab fa-twitter"></i></a></div>
-      <div><a href="https://www.freecodecamp.org/mhoumann87" target="_blank"><i class="fab fa-free-code-camp"></i></a></div>
-      <div><a href="https://codepen.io/michael-h/" target="_blank"><i class="fab fa-codepen"></i></a></div>
+      <div><a href="https://www.facebook.com/michael.houmann" target="_blank"><i class="fab fa-facebook-square"></i></a></div>
       <div><a href="https://github.com/mhoumann87/" target="_blank"><i class="fab fa-github"></i></a></div>
+      <div><a href="https://twitter.com/MichaelHoumann" target="_blank"><i class="fab fa-twitter"></i></a></div>
+      <div><a href="https://www.linkedin.com/in/michael-houmann-3b03654b/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
 
     </div>
   </footer>

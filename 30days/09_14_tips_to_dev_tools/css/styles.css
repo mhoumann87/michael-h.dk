@@ -103,27 +103,26 @@ header {
 
 /* Navigation */
 
-nav ul {
+nav {
   display: flex;
-  flex-direction: row;
-  justify-items: flex-end;
-  list-style: none;
-}
-
-nav li {
-  padding: 1rem;
-}
-
-nav li a {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-weight: 600;
   font-size: 1.3rem;
-  text-decoration: none;
-  cursor: pointer;
 }
 
-nav li a:hover,
-nav li a:active,
-nav li a:focus {
+.nav__div {
+  margin: 0.75rem 0;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:active,
+nav a:focus {
   border-bottom: 1px solid #a14000;
   color: #a14000;
 }
@@ -131,6 +130,20 @@ nav li a:focus {
 nav .current {
   border-bottom: 1px solid #a14000;
   color: #a14000;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.25em) {
+    nav {
+      flex-direction: row;
+      align-items: center;
+      margin-right: 1rem;
+    }
+
+    .nav__div {
+      margin: 0 0.75rem;
+    }
+  }
 }
 
 /* Breadcrumb line */

@@ -3,12 +3,12 @@
 */
 
 :root {
-  --background: #E1C0A9;
-  --accent: #A63340;
-  --rgba: rgba(225, 192, 169, .6);
+  --background: #e1c0a9;
+  --accent: #a63340;
+  --rgba: rgba(225, 192, 169, 0.6);
   --font: #403142;
-  --accent-font: #EAE1D0;
-  --link-hover: #73978C;
+  --accent-font: #eae1d0;
+  --link-hover: #73978c;
   --body-font: 'Mukta Malar', sans-serif;
   --headline-font: 'Syncopate', sans-serif;
 }
@@ -22,17 +22,15 @@ body {
   font-family: var(--body-font);
 }
 
-@media screen and (min-width: 56.250rem) {
-
+@media screen and (min-width: 56.25rem) {
   body {
     font-size: 100%;
   }
 }
 
-@media screen and (min-width: 112.500rem) {
-
+@media screen and (min-width: 112.5rem) {
   body {
-    width: 112.500rem;
+    width: 112.5rem;
     margin: 0 auto;
   }
 }
@@ -74,14 +72,13 @@ header {
 
 .text {
   background-color: var(--accent);
-  padding: .8rem;
+  padding: 0.8rem;
 }
 
 .text h1 {
   font-size: 2rem;
   font-weight: 400;
   margin: 0;
-
 }
 
 .text a,
@@ -92,8 +89,7 @@ header {
 }
 
 @supports (grid-area: auto) {
-  @media screen and (min-width: 56.250em) {
-
+  @media screen and (min-width: 56.25em) {
     header {
       flex-direction: row;
       justify-content: space-between;
@@ -102,7 +98,7 @@ header {
 
     .branding {
       display: grid;
-      background-image: url("../images/birds_top.jpg");
+      background-image: url('../images/birds_top.jpg');
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -118,29 +114,51 @@ header {
       font-size: 3rem;
       margin: 0;
     }
-
   }
-
 }
-
 
 /* Navigation */
-
 nav {
   display: flex;
-  justify-content: flex-start;
-}
-
-.button {
-  padding: 10px;
-  margin-right: 10px;
-}
-
-.button a {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.3rem;
+}
+
+.nav__div {
+  margin: 0.75rem 0;
+}
+
+nav a {
   text-decoration: none;
-  cursor: pointer;
+}
+
+nav a:hover,
+nav a:active,
+nav a:focus {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+nav .current {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.25em) {
+    nav {
+      flex-direction: row;
+      align-items: center;
+      margin-right: 1rem;
+    }
+
+    .nav__div {
+      margin: 0 0.75rem;
+    }
+  }
 }
 
 /* Breadcrumb line */
@@ -156,9 +174,9 @@ nav {
 }
 
 .crumb::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  content: "\f0a9";
+  content: '\f0a9';
   margin: 0 10px;
 }
 
@@ -173,8 +191,7 @@ nav {
 }
 
 @supports (grid-area: auto) {
-  @media screen and (min-width: 56.250em) {
-
+  @media screen and (min-width: 56.25em) {
     nav {
       display: flex;
       flex-direction: row;
@@ -222,7 +239,6 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-around;
-
 }
 
 footer a,
@@ -235,11 +251,8 @@ footer a:hover {
   color: var(--link-hover);
 }
 
-
-
 @supports (grid-area: auto) {
-
-  @media screen and (min-width: 56.250rem) {
+  @media screen and (min-width: 56.25rem) {
     footer {
       flex-direction: row;
       justify-content: space-between;
@@ -280,7 +293,7 @@ footer a:hover {
 
 main {
   min-height: 60vh;
-  background-image: url("../images/israel-palacio-459693-unsplash.jpg");
+  background-image: url('../images/israel-palacio-459693-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -290,7 +303,7 @@ main {
 }
 
 .list-box {
-  background-color: rgba(225, 192, 169, .8);
+  background-color: rgba(225, 192, 169, 0.8);
   padding: 3rem;
 }
 
@@ -303,8 +316,8 @@ form {
   display: flex;
 }
 
-input[type=text] {
-  padding: .4rem;
+input[type='text'] {
+  padding: 0.4rem;
   font-size: 1.4rem;
   flex: 1;
   background-color: transparent;
@@ -314,10 +327,10 @@ input[type=text] {
   font-family: var(--body-font);
 }
 
-input[type=submit] {
+input[type='submit'] {
   border: none;
   outline: 0;
-  margin-left: .8rem;
+  margin-left: 0.8rem;
   font-size: 1.4rem;
   color: var(--accent-font);
   background-color: var(--accent);
@@ -329,7 +342,7 @@ submit {
 
 .list-box li {
   font-size: 1.4rem;
-  padding: .4rem;
+  padding: 0.4rem;
 }
 
 .list-box li:not(:last-child) {
@@ -337,9 +350,9 @@ submit {
 }
 
 .list-box h2 {
-  margin: 0 .3rem;
+  margin: 0 0.3rem;
 }
 
 .msg {
-  color: #FF0000;
+  color: #ff0000;
 }

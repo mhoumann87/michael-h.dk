@@ -4,11 +4,11 @@
 
 :root {
   --background: #cbe5f6;
-  --accent: #76A2BF;
-  --rgba: rgba(203, 229, 246, .6);
-  --font: #40555A;
-  --accent-font: #F7EBC1;
-  --link-hover: #172D3B;
+  --accent: #76a2bf;
+  --rgba: rgba(203, 229, 246, 0.6);
+  --font: #40555a;
+  --accent-font: #f7ebc1;
+  --link-hover: #172d3b;
   --body-font: 'Mukta Malar', sans-serif;
   --headline-font: 'Syncopate', sans-serif;
 }
@@ -22,17 +22,15 @@ body {
   font-family: var(--body-font);
 }
 
-@media screen and (min-width: 56.250rem) {
-
+@media screen and (min-width: 56.25rem) {
   body {
     font-size: 100%;
   }
 }
 
-@media screen and (min-width: 112.500rem) {
-
+@media screen and (min-width: 112.5rem) {
   body {
-    width: 112.500rem;
+    width: 112.5rem;
     margin: 0 auto;
   }
 }
@@ -74,14 +72,13 @@ header {
 
 .text {
   background-color: var(--accent);
-  padding: .8rem;
+  padding: 0.8rem;
 }
 
 .text h1 {
   font-size: 2rem;
   font-weight: 400;
   margin: 0;
-
 }
 
 .text a,
@@ -92,8 +89,7 @@ header {
 }
 
 @supports (grid-area: auto) {
-  @media screen and (min-width: 56.250em) {
-
+  @media screen and (min-width: 56.25em) {
     header {
       flex-direction: row;
       justify-content: space-between;
@@ -102,7 +98,7 @@ header {
 
     .branding {
       display: grid;
-      background-image: url("../images/cv_top.jpg");
+      background-image: url('../images/cv_top.jpg');
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -118,29 +114,52 @@ header {
       font-size: 3rem;
       margin: 0;
     }
-
   }
-
 }
-
 
 /* Navigation */
 
 nav {
   display: flex;
-  justify-content: flex-start;
-}
-
-.button {
-  padding: 10px;
-  margin-right: 10px;
-}
-
-.button a {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.3rem;
+}
+
+.nav__div {
+  margin: 0.75rem 0;
+}
+
+nav a {
   text-decoration: none;
-  cursor: pointer;
+}
+
+nav a:hover,
+nav a:active,
+nav a:focus {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+nav .current {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.25em) {
+    nav {
+      flex-direction: row;
+      align-items: center;
+      margin-right: 1rem;
+    }
+
+    .nav__div {
+      margin: 0 0.75rem;
+    }
+  }
 }
 
 /* Breadcrumb line */
@@ -156,9 +175,9 @@ nav {
 }
 
 .crumb::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  content: "\f0a9";
+  content: '\f0a9';
   margin: 0 10px;
 }
 
@@ -172,10 +191,8 @@ nav {
   cursor: pointer;
 }
 
-
 @supports (grid-area: auto) {
-  @media screen and (min-width: 56.250em) {
-
+  @media screen and (min-width: 56.25em) {
     nav {
       display: flex;
       flex-direction: row;
@@ -235,12 +252,8 @@ footer a:hover {
   color: var(--link-hover);
 }
 
-
-
-
 @supports (grid-area: auto) {
-
-  @media screen and (min-width: 56.250rem) {
+  @media screen and (min-width: 56.25rem) {
     footer {
       flex-direction: row;
       justify-content: space-between;
@@ -301,9 +314,8 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(203, 229, 246, .8);
+  background-color: rgba(203, 229, 246, 0.8);
   padding: 2rem 0;
-  ;
 }
 
 .item-list {
@@ -329,12 +341,12 @@ svg {
   display: none;
 }
 
-.item-list input+label::before {
+.item-list input + label::before {
   content: '⬜';
   margin-right: 10px;
 }
 
-.item-list input:checked+label::before {
+.item-list input:checked + label::before {
   content: '🧀';
 }
 
@@ -345,5 +357,5 @@ svg {
 .add-items input {
   padding: 10px;
   outline: 0;
-  border: 1px solid rgba(23, 59, 45, 0.3)
+  border: 1px solid rgba(23, 59, 45, 0.3);
 }
