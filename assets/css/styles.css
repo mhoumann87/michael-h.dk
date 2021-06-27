@@ -1,8 +1,10 @@
 /* Set up variables */
 :root {
-  --background: #fff1b9;
+  --background: #faedcd;
+  --bg-head: rgb(254, 250, 224);
+  --bg-cards: #e9edc9;
   --text: #272625;
-  --border: #5e5e5f;
+  --border: #ccd5ae;
   --link: #c65146;
   --hover: #af4034;
 
@@ -46,16 +48,27 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0.825rem;
+  padding: 0;
   margin: 0;
   height: auto;
-  background: crimson;
+  background-color: var(--bg-head);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .branding {
-  background-color: pink;
+  display: grid;
+  background-image: url('../../30days/assets/images/birds_top.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
   width: 50%;
   height: auto;
+}
+
+.branding .text {
+  grid: 1;
+  background-color: rgba(254, 250, 224, 0.85);
+  padding: 0.75rem;
 }
 
 @media screen and (min-width: 53.125rem) {
@@ -109,6 +122,23 @@ nav .current {
 
 main {
   grid-area: main;
+  padding: 1rem;
+}
+
+.card__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.card-test {
+  background: crimson;
+  width: 100%;
+  height: 300px;
+}
+
+.card {
+  width: 100%;
 }
 
 footer {
@@ -119,6 +149,7 @@ footer {
   justify-content: center;
   margin-bottom: 1rem;
   border-top: 3px solid var(--border);
+  background-color: var(--bg-head);
 }
 
 @media screen and (min-width: 43.75rem) {
