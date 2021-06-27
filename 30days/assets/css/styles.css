@@ -227,7 +227,8 @@ footer {
 }
 
 .social {
-  width: 100%;
+  justify-self: flex-end;
+  width: auto;
   display: flex;
   justify-content: space-around;
 }

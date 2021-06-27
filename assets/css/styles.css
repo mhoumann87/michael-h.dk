@@ -25,6 +25,7 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-areas: 'header' 'main' 'footer';
   font-family: var(--body);
+  width: 100%;
 }
 
 a {
@@ -46,6 +47,15 @@ header {
   align-items: center;
   justify-content: center;
   padding: 0.825rem;
+  margin: 0;
+  height: auto;
+  background: crimson;
+}
+
+.branding {
+  background-color: pink;
+  width: 50%;
+  height: auto;
 }
 
 @media screen and (min-width: 53.125rem) {

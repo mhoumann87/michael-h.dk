@@ -4,11 +4,11 @@
 
 :root {
   --background: #ffffff;
-  --accent: #5B6B91;
-  --rgba: rgba(255, 255, 255, .8);
+  --accent: #5b6b91;
+  --rgba: rgba(255, 255, 255, 0.8);
   --font: #282828;
   --accent-font: #ffffff;
-  --link-hover: #6C96C1;
+  --link-hover: #6c96c1;
   --body-font: 'Mukta Malar', sans-serif;
   --headline-font: 'Syncopate', sans-serif;
 }
@@ -22,17 +22,15 @@ body {
   font-family: var(--body-font);
 }
 
-@media screen and (min-width: 56.250rem) {
-
+@media screen and (min-width: 56.25rem) {
   body {
     font-size: 100%;
   }
 }
 
-@media screen and (min-width: 112.500rem) {
-
+@media screen and (min-width: 112.5rem) {
   body {
-    width: 112.500rem;
+    width: 112.5rem;
     margin: 0 auto;
   }
 }
@@ -74,14 +72,13 @@ header {
 
 .text {
   background-color: var(--accent);
-  padding: .8rem;
+  padding: 0.8rem;
 }
 
 .text h1 {
   font-size: 2rem;
   font-weight: 400;
   margin: 0;
-
 }
 
 .text a,
@@ -92,8 +89,7 @@ header {
 }
 
 @supports (grid-area: auto) {
-  @media screen and (min-width: 56.250em) {
-
+  @media screen and (min-width: 56.25em) {
     header {
       flex-direction: row;
       justify-content: space-between;
@@ -102,7 +98,7 @@ header {
 
     .branding {
       display: grid;
-      background-image: url("../images/birds_top.jpg");
+      background-image: url('../images/birds_top.jpg');
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -118,29 +114,52 @@ header {
       font-size: 3rem;
       margin: 0;
     }
-
   }
-
 }
-
 
 /* Navigation */
 
 nav {
   display: flex;
-  justify-content: flex-start;
-}
-
-.button {
-  padding: 10px;
-  margin-right: 10px;
-}
-
-.button a {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.3rem;
+}
+
+.nav__div {
+  margin: 0.75rem 0;
+}
+
+nav a {
   text-decoration: none;
-  cursor: pointer;
+}
+
+nav a:hover,
+nav a:active,
+nav a:focus {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+nav .current {
+  border-bottom: 1px solid #a14000;
+  color: #a14000;
+}
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 56.25em) {
+    nav {
+      flex-direction: row;
+      align-items: center;
+      margin-right: 1rem;
+    }
+
+    .nav__div {
+      margin: 0 0.75rem;
+    }
+  }
 }
 
 /* Breadcrumb line */
@@ -156,9 +175,9 @@ nav {
 }
 
 .crumb::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  content: "\f0a9";
+  content: '\f0a9';
   margin: 0 10px;
 }
 
@@ -170,24 +189,6 @@ nav {
   text-decoration: none;
   color: var(--accent-font);
   cursor: pointer;
-}
-
-@supports (grid-area: auto) {
-  @media screen and (min-width: 56.250em) {
-
-    nav {
-      display: flex;
-      flex-direction: row;
-      justify-items: flex-end;
-    }
-
-    .button a {
-      font-weight: 600;
-      font-size: 1.3rem;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  }
 }
 
 /* Footer */
@@ -222,7 +223,6 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-around;
-
 }
 
 footer a,
@@ -235,11 +235,8 @@ footer a:hover {
   color: var(--link-hover);
 }
 
-
-
 @supports (grid-area: auto) {
-
-  @media screen and (min-width: 56.250rem) {
+  @media screen and (min-width: 56.25rem) {
     footer {
       flex-direction: row;
       justify-content: space-between;
@@ -288,7 +285,7 @@ main {
 
 .timer-box {
   min-height: 75vh;
-  background-color: rgba(255, 255, 255, .7);
+  background-color: rgba(255, 255, 255, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -309,7 +306,7 @@ main {
   align-items: stretch;
 }
 
-.control>* {
+.control > * {
   flex: 1;
   white-space: nowrap;
 }
@@ -333,15 +330,15 @@ main {
   border: 0;
   cursor: pointer;
   color: var(--accent-font);
-  background: rgba(91, 107, 145, .6);
+  background: rgba(91, 107, 145, 0.6);
   font-size: 2rem;
-  border-bottom: 3px solid rgba(40, 40, 40, .6);
-  border-right: 1px solid rgba(40, 40, 40, .6);
+  border-bottom: 3px solid rgba(40, 40, 40, 0.6);
+  border-right: 1px solid rgba(40, 40, 40, 0.6);
 }
 
 .timer-button:hover,
 .timer-button:focus {
-  background: rgba(91, 107, 145, .8);
+  background: rgba(91, 107, 145, 0.8);
 }
 
 .display p,

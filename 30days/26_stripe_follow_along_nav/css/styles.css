@@ -3,12 +3,12 @@
 */
 
 :root {
-  --background: #FF6300;
+  --background: #ff6300;
   --accent: #000000;
-  --rgba: rgba(0, 0, 0, .6);
+  --rgba: rgba(0, 0, 0, 0.6);
   --font: #000000;
   --accent-font: #ffffff;
-  --link-hover: #63236E;
+  --link-hover: #63236e;
   --body-font: 'Poppins', sans-serif;
   --headline-font: 'PT Serif', serif;
 }
@@ -21,17 +21,15 @@ body {
   font-size: 90%;
 }
 
-@media screen and (min-width: 56.250rem) {
-
+@media screen and (min-width: 56.25rem) {
   body {
     font-size: 100%;
   }
 }
 
-@media screen and (min-width: 112.500rem) {
-
+@media screen and (min-width: 112.5rem) {
   body {
-    width: 112.500rem;
+    width: 112.5rem;
     margin: 0 auto;
   }
 }
@@ -68,7 +66,7 @@ header {
   margin: 0;
   width: 100%;
   min-height: 75vh;
-  background-image: url("../images/leximphoto-427140-unsplash.jpg");
+  background-image: url('../images/leximphoto-427140-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -109,7 +107,7 @@ nav {
   margin: 0;
   position: relative;
   perspective: 600px;
-  padding: .5em 0;
+  padding: 0.5em 0;
 }
 
 nav ul {
@@ -118,18 +116,16 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: space-evenly;
-
-
 }
 
-.navbar>li>a {
+.navbar > li > a {
   color: var(--accent-font);
   text-decoration: none;
   font-size: 1.4rem;
   display: inline-block;
 }
 
-.navbar>li {
+.navbar > li {
   position: relative;
   display: flex;
   justify-content: center;
@@ -146,7 +142,7 @@ nav ul {
   padding: 20px;
   top: -10px;
   border-radius: 2px;
-  transition: all .5s;
+  transition: all 0.5s;
   transform: translateY(40px);
   will-change: opacity;
   display: none;
@@ -184,14 +180,11 @@ nav ul {
   display: block;
   background: white;
   transform: translate(-75%) rotate(45deg);
-
 }
 
 .dropdown a {
   color: var(--font);
 }
-
-
 
 .ddHome {
   min-width: 250px;
@@ -199,7 +192,6 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .ddBio {
@@ -217,8 +209,8 @@ nav ul {
   max-width: 150px;
   border-radius: 50%;
   float: right;
-  margin-left: .5rem;
-  margin-bottom: .5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .ddSkils {
@@ -227,8 +219,6 @@ nav ul {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-
-
 }
 
 .ddSkils ul {
@@ -238,7 +228,7 @@ nav ul {
   align-items: flex-start;
 }
 
-.ddSkils>ul>li {
+.ddSkils > ul > li {
   text-align: left;
   margin-bottom: 10px;
   font-family: var(--body-font);
@@ -271,17 +261,13 @@ nav ul {
   background: #326ada;
 }
 
-.free {
-  background: #006400;
-}
-
-.code {
-  background: #000000;
-}
-
 .git {
   background: var(--accent-font);
   border: 1px solid #211f1f;
+}
+
+.fb {
+  background: #4267b2;
 }
 
 .git a {
@@ -304,14 +290,12 @@ nav ul {
   color: var(--link-hover);
 }
 
-
-
 /* 
 Main content
 */
 
 main {
-  padding: 0 .8rem;
+  padding: 0 0.8rem;
 }
 
 main section {
@@ -337,7 +321,7 @@ main section {
 
 footer {
   background-color: var(--accent);
-  padding: 0 .8rem;
+  padding: 0 0.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -358,4 +342,27 @@ footer .social {
 
 footer .social a {
   font-size: 2rem;
+}
+
+/* Top navigation */
+
+.nav {
+  background: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav .links {
+  display: flex;
+}
+
+.nav .link:not(:last-child) {
+  margin-right: 0.75rem;
 }
