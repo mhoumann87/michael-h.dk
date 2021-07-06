@@ -98,7 +98,9 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+dist/*.map
+dist/*.js
+dist/*.css
 
 # Gatsby files
 .cache/
