@@ -1,0 +1,30 @@
+{
+  "name": "@mhoumann87/start_scss",
+  "version": "0.1.0",
+  "description": "Starter files for creating a webpack project with dart-sass and postCSS",
+  "main": "index.js",
+  "repository": "git@github.com:mhoumann87/webpack_start_scss.git",
+  "author": "Michael Houmann <mhoumann87@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^5.2.6",
+    "mini-css-extract-plugin": "^2.0.0",
+    "postcss": "^8.3.5",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
+    "webpack": "^5.42.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "start": "webpack serve",
+    "build": "NODE_ENV=production webpack"
+  },
+  "keywords": [
+    "webpack",
+    "dart-sass",
+    "postCSS"
+  ]
+}
