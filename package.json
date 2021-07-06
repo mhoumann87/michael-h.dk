@@ -1,9 +1,9 @@
 {
-  "name": "@mhoumann87/start_scss",
+  "name": "michael-h",
   "version": "0.1.0",
-  "description": "Starter files for creating a webpack project with dart-sass and postCSS",
+  "description": "Portfolio for myself as designer, developer and photographer",
   "main": "index.js",
-  "repository": "git@github.com:mhoumann87/webpack_start_scss.git",
+  "repository": "git@github.com:mhoumann87/michael-h.dk.git",
   "author": "Michael Houmann <mhoumann87@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -25,6 +25,8 @@
   "keywords": [
     "webpack",
     "dart-sass",
-    "postCSS"
+    "postCSS",
+    "portfolio",
+    "website"
   ]
 }
