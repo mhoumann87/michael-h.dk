@@ -1,0 +1,17 @@
+// Reset default browser styles, so the site will look alike on all
+
+// Based on https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
+
+// Use border box globally
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+// Remove border on body and set base font-size
+body {
+  border: none;
+  font-size: 16px;
+  margin: 0;
+}
