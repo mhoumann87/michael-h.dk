@@ -15,3 +15,74 @@ body {
   font-size: 16px;
   margin: 0;
 }
+
+// Maintain hidden behavior when overriding display values
+[hidden] {
+  display: none;
+}
+
+// Set headings units to rem, remain the size
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.17rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.83rem;
+}
+
+h6 {
+  font-size: 0.67rem;
+}
+
+// Make a uniform look on all browsers
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
+  height: 0;
+  overflow: visible;
+}
+
+// Set uniform values for these elements,
+// vertical align is if the display value is overwritten
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+// audio without controls remain hidden
+audio:not([controls]) {
+  display: none;
+}
+
+// * These elements display inline by default , but that is not
+// * the expected behavior for either, can mess with layout and
+// * aspect-ratio handling
+
+// Remove the unnecessary wrapping, while maintaining contents
+picture {
+  display: contents;
+}
+
+// Source have nothing to show, so we hide them entirely
+source {
+  display: none;
+}
+
+// Remove default width of 300px
+audio {
+  width: 100%;
+}
