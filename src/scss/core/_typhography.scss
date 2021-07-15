@@ -1,0 +1,5 @@
+@use '../abstracts/index' as *;
+
+@include headings {
+  font-family: $headlines;
+}

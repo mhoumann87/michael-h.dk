@@ -1,0 +1,9 @@
+// Mixin for Headings. No argument all headings from h1 to h6
+// else use from lowest to highest (1 - 6)
+@mixin headings($from: 1, $to: 6) {
+  @for $i from $from through $to {
+    h#{$i} {
+      @content;
+    }
+  }
+}
